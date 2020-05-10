@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8BF7B318-5541-4EF1-85DA-56943C31E589}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentAid</RootNamespace>
+    <AssemblyName>StudentAid</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddContests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddContests.Designer.cs">
+      <DependentUpon>AddContests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddInternship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInternship.Designer.cs">
+      <DependentUpon>AddInternship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPost.Designer.cs">
+      <DependentUpon>AddPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddReply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReply.Designer.cs">
+      <DependentUpon>AddReply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AvailableCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvailableCourses.Designer.cs">
+      <DependentUpon>AvailableCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Community_PostsOnly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Community_PostsOnly.Designer.cs">
+      <DependentUpon>Community_PostsOnly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Community_RepliesOnly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Community_RepliesOnly.Designer.cs">
+      <DependentUpon>Community_RepliesOnly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="CourseStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseStatistics.Designer.cs">
+      <DependentUpon>CourseStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DBManager.cs" />
+    <Compile Include="Doctor%27sCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor%27sCourses.Designer.cs">
+      <DependentUpon>Doctor%27sCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_ChangePassword.Designer.cs">
+      <DependentUpon>Doctor_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Interface_Beg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Interface_Beg.Designer.cs">
+      <DependentUpon>Doctor_Interface_Beg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Login.Designer.cs">
+      <DependentUpon>Doctor_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedbacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedbacks.Designer.cs">
+      <DependentUpon>Feedbacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackStatistics.Designer.cs">
+      <DependentUpon>FeedbackStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiveYourFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiveYourFeedback.Designer.cs">
+      <DependentUpon>GiveYourFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookingForASponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookingForASponsor.Designer.cs">
+      <DependentUpon>LookingForASponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Interface.Designer.cs">
+      <DependentUpon>Main Interface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfile.Designer.cs">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfileDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfileDetails.Designer.cs">
+      <DependentUpon>MyProfileDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestProject.Designer.cs">
+      <DependentUpon>RequestProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sponsor_ChangePassword.Designer.cs">
+      <DependentUpon>Sponsor_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor_Interface_Beg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sponsor_Interface_Beg.Designer.cs">
+      <DependentUpon>Sponsor_Interface_Beg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsor_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sponsor_Login.Designer.cs">
+      <DependentUpon>Sponsor_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoredProcedures.cs" />
+    <Compile Include="StudentsInThisCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentsInThisCourse.Designer.cs">
+      <DependentUpon>StudentsInThisCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInThisIntern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentsInThisIntern.Designer.cs">
+      <DependentUpon>StudentsInThisIntern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_ChangePassword.Designer.cs">
+      <DependentUpon>Student_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Interface_Beg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Interface_Beg.Designer.cs">
+      <DependentUpon>Student_Interface_Beg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Login.Designer.cs">
+      <DependentUpon>Student_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadCourses.Designer.cs">
+      <DependentUpon>UploadCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadResearchPapers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadResearchPapers.Designer.cs">
+      <DependentUpon>UploadResearchPapers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadSeminars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadSeminars.Designer.cs">
+      <DependentUpon>UploadSeminars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadTextbooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadTextbooks.Designer.cs">
+      <DependentUpon>UploadTextbooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewContests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewContests.Designer.cs">
+      <DependentUpon>ViewContests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewInterns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInterns.Designer.cs">
+      <DependentUpon>ViewInterns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBusinessIdeas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBusinessIdeas.Designer.cs">
+      <DependentUpon>ViewBusinessIdeas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMyInternships.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMyInternships.Designer.cs">
+      <DependentUpon>ViewMyInternships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProjectTeams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProjectTeams.Designer.cs">
+      <DependentUpon>ViewProjectTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRP.Designer.cs">
+      <DependentUpon>ViewRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSeminars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSeminars.Designer.cs">
+      <DependentUpon>ViewSeminars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTextbooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTextbooks.Designer.cs">
+      <DependentUpon>ViewTextbooks.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddContests.resx">
+      <DependentUpon>AddContests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddInternship.resx">
+      <DependentUpon>AddInternship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPost.resx">
+      <DependentUpon>AddPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReply.resx">
+      <DependentUpon>AddReply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AvailableCourses.resx">
+      <DependentUpon>AvailableCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Community_PostsOnly.resx">
+      <DependentUpon>Community_PostsOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Community_RepliesOnly.resx">
+      <DependentUpon>Community_RepliesOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseStatistics.resx">
+      <DependentUpon>CourseStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor%27sCourses.resx">
+      <DependentUpon>Doctor%27sCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_ChangePassword.resx">
+      <DependentUpon>Doctor_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Interface_Beg.resx">
+      <DependentUpon>Doctor_Interface_Beg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Login.resx">
+      <DependentUpon>Doctor_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedbacks.resx">
+      <DependentUpon>Feedbacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackStatistics.resx">
+      <DependentUpon>FeedbackStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiveYourFeedback.resx">
+      <DependentUpon>GiveYourFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookingForASponsor.resx">
+      <DependentUpon>LookingForASponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Interface.resx">
+      <DependentUpon>Main Interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfile.resx">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfileDetails.resx">
+      <DependentUpon>MyProfileDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RequestProject.resx">
+      <DependentUpon>RequestProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sponsor_ChangePassword.resx">
+      <DependentUpon>Sponsor_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sponsor_Interface_Beg.resx">
+      <DependentUpon>Sponsor_Interface_Beg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sponsor_Login.resx">
+      <DependentUpon>Sponsor_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentsInThisCourse.resx">
+      <DependentUpon>StudentsInThisCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentsInThisIntern.resx">
+      <DependentUpon>StudentsInThisIntern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_ChangePassword.resx">
+      <DependentUpon>Student_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Interface_Beg.resx">
+      <DependentUpon>Student_Interface_Beg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Login.resx">
+      <DependentUpon>Student_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadCourses.resx">
+      <DependentUpon>UploadCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadResearchPapers.resx">
+      <DependentUpon>UploadResearchPapers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadSeminars.resx">
+      <DependentUpon>UploadSeminars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadTextbooks.resx">
+      <DependentUpon>UploadTextbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewContests.resx">
+      <DependentUpon>ViewContests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewInterns.resx">
+      <DependentUpon>ViewInterns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBusinessIdeas.resx">
+      <DependentUpon>ViewBusinessIdeas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMyInternships.resx">
+      <DependentUpon>ViewMyInternships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProjectTeams.resx">
+      <DependentUpon>ViewProjectTeams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRP.resx">
+      <DependentUpon>ViewRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSeminars.resx">
+      <DependentUpon>ViewSeminars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTextbooks.resx">
+      <DependentUpon>ViewTextbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
